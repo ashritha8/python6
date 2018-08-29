@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EX2</title>
+	<style>
+		table, tr, td {
+			border: solid black;
+			background: lightblue;
+    			border-collapse: collapse;
+			width: 33%;
+			text-align: center;
+		}
+	</style>
+	<script>
+		function calc(f){
+			var k=parseInt(f.num.value);
+			if(isNaN(k))
+				alert("Enter the valid number")
+			else{
+				document.write("<table border=2><tr><th colspan='3'>Number from 0 to "+k+" with their squares and cubes</th></tr>");
+				document.write("<tr><td>Number</td><td>Square</td><td>Cube</td></tr>");
+				for (var n=0; n<=k; n++)
+				{	
+					document.write("<tr><td>"+n+"</td><td>"+n*n+"</td><td>"+n*n*n+"</td></tr>");
+				}
+				document.write("</table>");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name=myForm>
+		<table border=2>
+		<tr><td>Enter the number</td><td><input type=text name=num value=0></td></tr>
+		<tr><td colspan="2"><input type=button value=Submit onclick="calc(this.form)"></td></tr>
+	</table>
+    </form>
+</body>
+
